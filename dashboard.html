@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="dashboard.css">
+<script src="dashboard.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,400;1,500;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+ 
+</head>
+<body>
+<!---------------------------------------header------------------------------------------>
+<header class="header">
+    <a href="admin.html">
+     
+   <p class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i></p>
+      </a>
+      <img class="profile-img" src="icons/Bhanu-prakash.png">
+      <div class="Bhanu">
+        <p class="Admin-User" style="margin-left: 350px;">Admin User</p>
+        <p class="view-profile"> View Profile &gt;</p>
+      </div>
+      <div class="date-time">
+        <p id="date">Fri 14 July</p>
+        <P id="time">03 : 20 PM</P>
+      </div>
+    </header>
+    
+<!------------------------side bar-------------------------------->
+<aside class="side-bar">
+    <img class="img" src="icons/ujjain-darshan@3x.png" alt="image">
+    <div id="Home" onclick="home()">Dashboard Home</div>
+    <div id="Hotel-Booking" onclick="hotelBooking()">Hotel Booking</div>
+    <div id="Puja-Booking" onclick="pujaBooking()">Puja Booking</div>
+    <div id="Ujjain-Darshan" onclick="ujjainDarshan()">Ujjain Darshan</div>
+    <div id="Omkarshwar-Tour" onclick="omkarshwarTour()">Omkarshwar Tour</div>
+    <div id="Maa-Baglamukki-Tour" onclick="maaBaglamukkiTour()">Maa Baglamukki Tour</div>
+    <div id="Taxi-Services" onclick="taxiServices()">Taxi Services</div>
+    <div id="Airport-Rides" onclick="airportRides()">Airport Rides</div>
+   
+</aside>
+
+    <!---------------------------home html---------------------------->
+    <main class="main" id="homepage">
+      <p class="Hotel-Bookings">Dashboard</p>
+
+      <div class="Dashborad_data">
+        <div class="Dashboard_card">
+            <img src="icons/kyc_info.png" alt="">
+            <p class="Dashboard_kyc_info">KYC Info </p>
+            <div class="Dashbord_Verified"> Verified </div>
+            <div class="Dashbord_cash">Status</div>
+           
+         </div>     
+             <div class="Dashboard_card1">
+                <img src="icons/tran1.png" alt="">
+                <p class="Dashboard_kyc_info1">Payments</p>
+                <div class="Dashboard_ruppe">2350</div>
+                <div class="Dashboard_ruppe1">1800</div>
+                <div class="Dashboard_cash1">By Cash</div>
+                <div class="Dashboard_online1">Online</div>
+             </div> 
+             <div class="Dashboard_card3">
+                <i class="fa-solid fa-code-pull-request" style="color: #e88b21;"></i>
+                <!-- <img src="icons/transaction.png" alt=""> -->
+                <p class="Dashboard_kyc_info3">Booking Orders</p>
+                <div class="Dashboard_divsetion1">
+                    <div>
+                        <div class="Dashboard_order1">24</div>
+                        <div class="Dashboard_orderdata22">Hotel</div>
+                    </div>
+                    <div>
+                        <div class="Dashboard_orderdata11">68</div>
+                        <div class="Dashboard_orderdata22" >Puja</div> 
+                    </div>
+                    <div>
+                        <div class="Dashboard_orderdata11">24</div>
+                        <div class="Dashboard_orderdata22">Visitings</div> 
+                    </div>
+                    <div>
+                        <div class="Dashboard_orderdata11">12</div>
+                        <div class="Dashboard_orderdata22">Taxi</div> 
+                    </div>
+                    <div>
+                        <div class="Dashboard_orderdata11">24</div>
+                        <div class="Dashboard_orderdata22" >Airport</div> 
+                    </div>
+                </div>
+             </div> 
+        </div>    
+        <p class="Dashboard_userRequest">User Requests</p>
+        <button class="Dashborad_datadownload">Download</button>
+        <div class="Dashboard_filterdatadownload"><img class="img1" src="icons/download.PNG" alt=""></div>
+        <div class="Dashboard_table-container">
+         <table>
+           <thead>
+               <tr>
+                   <th class="Dashboard_left">S.No</th>
+                   <th>User Name</th>
+                   <th>Mobile Number</th>
+                   <th>Request for</th>
+                   <th>Price ( ₹ )</th>
+                   <th>Status</th>
+                   <th class="Dashboard_right ">Response</th>
+               </tr>
+               <tbody>
+                   <tr>
+                       <td>1</td>
+                       <td>Kuram Surendra</td>
+                       <td>8660782020</td>
+                       <td>Hotel Room</td>
+                       <td>399.00</td>
+                       <td id="Dashboard_statusCell1" class="waiting">Waiting to Respond</td>
+                       <td id="Dashboard_act3" class="actions">
+                         <button class="approve" onclick="accept13()">Approve </button>
+                         <button class="reject" onclick="reject13()">Reject</button>
+                       </td>
+                   </tr>   
+               </tbody>
+               <tbody>
+                   <tr>
+                       <td>2</td>
+                       <td>Basavaraj Darur</td>
+                       <td>8660782020</td>
+                       <td class="cell4">Taxi city Ride</td>
+                       <td class="cell5">450.00</td>
+                       <td id="Dashboard_statusCell4" class="waiting">Waiting to Respond</td>
+                       <td id="Dashboard_act4" class="actions">
+                         <button class="approve" onclick="accept21()">Approve </button>
+                         <button class="reject" onclick="reject21()">Reject</button>
+                       </td>
+                     </tr>
+               </tbody>
+               <tbody>
+                   <tr>
+                       <td>3</td>
+                       <td>Chandra Mahesh</td>
+                       <td>8660782020</td>
+                       <td class="cell4">Ujjain Visiting Places</td>
+                       <td class="cell5">1200.00</td>
+                       <td id="Dashboard_statusCell22" class="waiting">Waiting to Respond</td>
+                       <td id="Dashboard_act22" class="actions">
+                         <button class="approve" onclick="accept34()">Approve </button>
+                         <button class="reject" onclick="reject34()">Reject</button>
+                       </td>
+                     </tr>
+               </tbody>
+               <tbody>
+                   <tr>
+                       <td>4</td>
+                       <td>Karthik Bontha</td>
+                       <td>8660782020</td>
+                       <td class="cell4">Omkareshwar Tour</td>
+                       <td class="cell5">2500.00</td>
+                       <td id="Dashboard_statusCell5" class="waiting">Waiting to Respond</td>
+                       <td id="Dashboard_act5" class="actions">
+                         <button class="approve" onclick="accept42()">Approve </button>
+                         <button class="reject" onclick="reject42()">Reject</button>
+                       </td>
+                     </tr>
+               </tbody>
+           </thead>
+         </table>
+        </div>
+    </main>
+
+    <!---------------------------hotel html----------------------------->
+    <main class="main" id="hotel" style="display: none;">
+      <p class="Hotel-Bookings">Hotel Bookings</p>
+              
+      <div class="card">
+         <img src="icons/combined-shape@3x.png" alt="">
+         <p> Payments</p>
+         <div class="rupee">2350</div>
+         <div class="rupee1">1800</div>
+         <div class="cash">By Cash</div>
+         <div class="online">Online</div>
+      </div> 
+      
+      <div class="cards">
+         <img src="icons/request@3x.png" alt="">
+         <p>Bookings</p>
+         <div class="rup">50 </div>
+         <div class="pay">Total</div>
+         <div class="rup1">24</div>
+         <div class="pay1">Ongoing</div>
+         <div class="rup2">6</div>
+         <div class="pay2">Finished</div>
+         <div class="rup3">12</div>
+         <div class="pay3">Reserved</div>
+      </div>
+ 
+      
+      <p class="user">User Requests</p>
+      
+      <div class="align"><button class="Download"> Download </button> </div>
+      <div class="align1"><img class="img1" src="icons/download.PNG" alt=""></div>
+ 
+      <div class="table-container">
+       <table>
+         <thead>
+             <tr>
+                 <th class="left">S.No</th>
+                 <th>User Name</th>
+                 <th>Mobile Number</th>
+                 <th>Members</th>
+                 <th>Price ( ₹ )</th>
+                 <th>Status</th>
+                 <th class="right">Response</th>
+             </tr>
+             <tbody>
+                 <tr>
+                     <td>1</td>
+                     <td>Bhanu Prakash</td>
+                     <td>9876543210</td>
+                     <td>3</td>
+                     <td>399.00</td>
+                     <td class="allocated">Allocated</td>
+                 </tr>   
+             </tbody>
+             <tbody>
+                 <tr>
+                     <td>2</td>
+                     <td>Sivaji Chava</td>
+                     <td>9876543210</td>
+                     <td class="cell4">3</td>
+                     <td class="cell5">450.00</td>
+                     <td id="statusCell4" class="waiting">Waiting to Respond</td>
+                     <td id="act4" class="actions">
+                       <button class="approve" onclick="aprve2()">Approve </button>
+                       <button class="reject" onclick="rect2()">Reject</button>
+                     </td>
+                   </tr>
+             </tbody>
+             <tbody>
+                 <tr>
+                     <td>3</td>
+                     <td>Chaithanya N</td>
+                     <td>9876543210</td>
+                     <td class="cell4">4</td>
+                     <td class="cell5">1200.00</td>
+                     <td class="rejected">Rejected</td>
+                     <td></td>
+                   </tr>
+             </tbody>
+             <tbody>
+                 <tr>
+                     <td>4</td>
+                     <td>Umesha N</td>
+                     <td>9876543210</td>
+                     <td class="cell4">2</td>
+                     <td class="cell5">2500.00</td>
+                     <td id="statusCell5" class="waiting">Waiting to Respond</td>
+                     <td id="act5" class="actions">
+                       <button class="approve" onclick="approve2()">Approve </button>
+                       <button class="reject" onclick="reject2()">Reject</button>
+                     </td>
+                   </tr>
+             </tbody>
+         </thead>
+       </table>
+      </div>
+    </main>
+
+
+    <!-------------------------puja html---------------------------->
+    <main class="main" id="puja" style="display: none;">
+        <p class="Hotel-Bookings">Puja Bookings</p>
+              
+         <div class="card">
+            <img src="icons/combined-shape@3x.png" alt="">
+            <p> Payments</p>
+            <div class="rupee">2350</div>
+            <div class="rupee1">1800</div>
+            <div class="cash">By Cash</div>
+            <div class="online">Online</div>
+         </div> 
+         
+         <div class="cards">
+            <img src="icons/request@3x.png" alt="">
+            <p>Bookings</p>
+            <div class="rup">50 </div>
+            <div class="pay">Total</div>
+            <div class="rup1">24</div>
+            <div class="pay1">Ongoing</div>
+            <div class="rup2">6</div>
+            <div class="pay2">Finished</div>
+            <div class="rup3">12</div>
+            <div class="pay3">Reserved</div>
+         </div>
+    
+         
+         <p class="user">User Requests</p>
+         
+         <div class="align"><button class="Download"> Download </button> </div>
+         <div class="align1"><img class="img1" src="icons/download.PNG" alt=""></div>
+    
+         <div class="table-container">
+          <table>
+            <thead>
+                <tr>
+                    <th class="left">S.No</th>
+                    <th>User Name</th>
+                    <th>Mobile Number</th>
+                    <th>Members</th>
+                    <th>Price ( ₹ )</th>
+                    <th>Status</th>
+                    <th class="right">Response</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Bhanu Prakash</td>
+                        <td>9876543210</td>
+                        <td>3</td>
+                        <td>399.00</td>
+                        <td class="allocated">Allocated</td>
+                    </tr>   
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>2</td>
+                        <td>Sivaji Chava</td>
+                        <td>9876543210</td>
+                        <td class="cell4">3</td>
+                        <td class="cell5">450.00</td>
+                        <td id="statusCell4" class="waiting">Waiting to Respond</td>
+                        <td id="act4" class="actions">
+                          <button class="approve" onclick="aprve2()">Approve </button>
+                          <button class="reject" onclick="rect2()">Reject</button>
+                        </td>
+                      </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>3</td>
+                        <td>Chaithanya N</td>
+                        <td>9876543210</td>
+                        <td class="cell4">4</td>
+                        <td class="cell5">1200.00</td>
+                        <td class="rejected">Rejected</td>
+                        <td></td>
+                      </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>4</td>
+                        <td>Umesha N</td>
+                        <td>9876543210</td>
+                        <td class="cell4">2</td>
+                        <td class="cell5">2500.00</td>
+                        <td id="statusCell5" class="waiting">Waiting to Respond</td>
+                        <td id="act5" class="actions">
+                          <button class="approve" onclick="approve2()">Approve </button>
+                          <button class="reject" onclick="reject2()">Reject</button>
+                        </td>
+                      </tr>
+                </tbody>
+            </thead>
+          </table>
+         </div>
+    </main>
+
+    <!-------------------------Ujjain html---------------------------->
+    <main class="main" id="Ujjain" style="display: none;">
+      <p class="Hotel-Bookings">Ujjain Darshan</p>
+              
+      <div class="card">
+         <img src="icons/combined-shape@3x.png" alt="">
+         <p> Payments</p>
+         <div class="rupee">2350</div>
+         <div class="rupee1">1800</div>
+         <div class="cash">By Cash</div>
+         <div class="online">Online</div>
+      </div> 
+      
+      <div class="cards">
+         <img src="icons/request@3x.png" alt="">
+         <p>Bookings</p>
+         <div class="rup">50 </div>
+         <div class="pay">Total</div>
+         <div class="rup1">24</div>
+         <div class="pay1">Ongoing</div>
+         <div class="rup2">6</div>
+         <div class="pay2">Finished</div>
+         <div class="rup3">12</div>
+         <div class="pay3">Reserved</div>
+      </div>
+ 
+      
+      <p class="user">User Requests</p>
+      
+      <div class="align"><button class="Download"> Download </button> </div>
+      <div class="align1"><img class="img1" src="icons/download.PNG" alt=""></div>
+ 
+      <div class="table-container">
+       <table>
+         <thead>
+             <tr>
+                 <th class="left">S.No</th>
+                 <th>User Name</th>
+                 <th>Mobile Number</th>
+                 <th>Members</th>
+                 <th>Price ( ₹ )</th>
+                 <th>Status</th>
+                 <th class="right">Response</th>
+             </tr>
+             <tbody>
+                 <tr>
+                     <td>1</td>
+                     <td>Bhanu Prakash</td>
+                     <td>9876543210</td>
+                     <td>3</td>
+                     <td>399.00</td>
+                     <td class="allocated">Allocated</td>
+                 </tr>   
+             </tbody>
+             <tbody>
+                 <tr>
+                     <td>2</td>
+                     <td>Sivaji Chava</td>
+                     <td>9876543210</td>
+                     <td class="cell4">3</td>
+                     <td class="cell5">450.00</td>
+                     <td id="statusCell4" class="waiting">Waiting to Respond</td>
+                     <td id="act4" class="actions">
+                       <button class="approve" onclick="aprve2()">Approve </button>
+                       <button class="reject" onclick="rect2()">Reject</button>
+                     </td>
+                   </tr>
+             </tbody>
+             <tbody>
+                 <tr>
+                     <td>3</td>
+                     <td>Chaithanya N</td>
+                     <td>9876543210</td>
+                     <td class="cell4">4</td>
+                     <td class="cell5">1200.00</td>
+                     <td class="rejected">Rejected</td>
+                     <td></td>
+                   </tr>
+             </tbody>
+             <tbody>
+                 <tr>
+                     <td>4</td>
+                     <td>Umesha N</td>
+                     <td>9876543210</td>
+                     <td class="cell4">2</td>
+                     <td class="cell5">2500.00</td>
+                     <td id="statusCell5" class="waiting">Waiting to Respond</td>
+                     <td id="act5" class="actions">
+                       <button class="approve" onclick="approve2()">Approve </button>
+                       <button class="reject" onclick="reject2()">Reject</button>
+                     </td>
+                   </tr>
+             </tbody>
+         </thead>
+       </table>
+      </div>
+    </main>
+
+    <!-------------------------Omkareshwar  html---------------------------->
+    <main class="main" id="Omkarshwar" style="display: none;">
+        <p class="Hotel-Bookings">Omkareshwar Tour</p>
+              
+         <div class="card">
+            <img src="icons/combined-shape@3x.png" alt="">
+            <p> Payments</p>
+            <div class="rupee">2350</div>
+            <div class="rupee1">1800</div>
+            <div class="cash">By Cash</div>
+            <div class="online">Online</div>
+         </div> 
+         
+         <div class="cards">
+            <img src="icons/request@3x.png" alt="">
+            <p>Bookings</p>
+            <div class="rup">50 </div>
+            <div class="pay">Total</div>
+            <div class="rup1">24</div>
+            <div class="pay1">Ongoing</div>
+            <div class="rup2">6</div>
+            <div class="pay2">Finished</div>
+            <div class="rup3">12</div>
+            <div class="pay3">Reserved</div>
+         </div>
+    
+         <p class="user">User Requests</p>
+         
+         <div class="align"><button class="Download"> Download </button> </div>
+         <div class="align1"><img class="img1" src="icons/download.PNG" alt=""></div>
+         
+
+         <div class="table-container">
+            <table>
+              <thead>
+                  <tr>
+                      <th class="left">S.No</th>
+                      <th>User Name</th>
+                      <th>Mobile Number</th>
+                      <th>Members</th>
+                      <th>Price ( ₹ )</th>
+                      <th>Status</th>
+                      <th class="right">Response</th>
+                  </tr>
+                  <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>Bhanu Prakash</td>
+                          <td>9876543210</td>
+                          <td>3</td>
+                          <td>399.00</td>
+                          <td class="allocated">Allocated</td>
+                      </tr>   
+                  </tbody>
+                  <tbody>
+                      <tr>
+                          <td>2</td>
+                          <td>Sivaji Chava</td>
+                          <td>9876543210</td>
+                          <td class="cell4">3</td>
+                          <td class="cell5">450.00</td>
+                          <td id="statusCell8" class="waiting">Waiting to Respond</td>
+                          <td id="act8" class="actions">
+                            <button class="approve" onclick="aprve4()">Approve </button>
+                            <button class="reject" onclick="rect4()">Reject</button>
+                          </td>
+                        </tr>
+                  </tbody>
+                  <tbody>
+                      <tr>
+                          <td>3</td>
+                          <td>Chaithanya N</td>
+                          <td>9876543210</td>
+                          <td class="cell4">4</td>
+                          <td class="cell5">1200.00</td>
+                          <td class="rejected">Rejected</td>
+                          <td></td>
+                        </tr>
+                  </tbody>
+                  <tbody>
+                      <tr>
+                          <td>4</td>
+                          <td>Umesha N</td>
+                          <td>9876543210</td>
+                          <td class="cell4">2</td>
+                          <td class="cell5">2500.00</td>
+                          <td id="statusCell9" class="waiting">Waiting to Respond</td>
+                          <td id="act9" class="actions">
+                            <button class="approve" onclick="approve4()">Approve </button>
+                            <button class="reject" onclick="reject4()">Reject</button>
+                          </td>
+                        </tr>
+                  </tbody>
+              </thead>
+            </table>
+           </div>
+    </main>
+
+    <!-------------------------Maa Baglamukhi  html---------------------------->
+    <main class="main" id="Maa" style="display: none;">
+      <p class="Hotel-Bookings">Maa Baglamukhi Tour</p>
+              
+      <div class="card">
+         <img src="icons/combined-shape@3x.png" alt="">
+         <p> Payments</p>
+         <div class="rupee">2350</div>
+         <div class="rupee1">1800</div>
+         <div class="cash">By Cash</div>
+         <div class="online">Online</div>
+      </div> 
+      
+      <div class="cards">
+         <img src="icons/request@3x.png" alt="">
+         <p>Bookings</p>
+         <div class="rup">50 </div>
+         <div class="pay">Total</div>
+         <div class="rup1">24</div>
+         <div class="pay1">Ongoing</div>
+         <div class="rup2">6</div>
+         <div class="pay2">Finished</div>
+         <div class="rup3">12</div>
+         <div class="pay3">Reserved</div>
+      </div>
+ 
+      
+      <p class="user">User Requests</p>
+      
+      <div class="align"><button class="Download"> Download </button> </div>
+      <div class="align1"><img class="img1" src="icons/download.PNG" alt=""></div>
+ 
+      <div class="table-container">
+       <table>
+         <thead>
+             <tr>
+                 <th class="left">S.No</th>
+                 <th>User Name</th>
+                 <th>Mobile Number</th>
+                 <th>Members</th>
+                 <th>Price ( ₹ )</th>
+                 <th>Status</th>
+                 <th class="right">Response</th>
+             </tr>
+             <tbody>
+                 <tr>
+                     <td>1</td>
+                     <td>Bhanu Prakash</td>
+                     <td>9876543210</td>
+                     <td>3</td>
+                     <td>399.00</td>
+                     <td class="allocated">Allocated</td>
+                 </tr>   
+             </tbody>
+             <tbody>
+                 <tr>
+                     <td>2</td>
+                     <td>Sivaji Chava</td>
+                     <td>9876543210</td>
+                     <td class="cell4">3</td>
+                     <td class="cell5">450.00</td>
+                     <td id="statusCell4" class="waiting">Waiting to Respond</td>
+                     <td id="act4" class="actions">
+                       <button class="approve" onclick="aprve2()">Approve </button>
+                       <button class="reject" onclick="rect2()">Reject</button>
+                     </td>
+                   </tr>
+             </tbody>
+             <tbody>
+                 <tr>
+                     <td>3</td>
+                     <td>Chaithanya N</td>
+                     <td>9876543210</td>
+                     <td class="cell4">4</td>
+                     <td class="cell5">1200.00</td>
+                     <td class="rejected">Rejected</td>
+                     <td></td>
+                   </tr>
+             </tbody>
+             <tbody>
+                 <tr>
+                     <td>4</td>
+                     <td>Umesha N</td>
+                     <td>9876543210</td>
+                     <td class="cell4">2</td>
+                     <td class="cell5">2500.00</td>
+                     <td id="statusCell5" class="waiting">Waiting to Respond</td>
+                     <td id="act5" class="actions">
+                       <button class="approve" onclick="approve2()">Approve </button>
+                       <button class="reject" onclick="reject2()">Reject</button>
+                     </td>
+                   </tr>
+             </tbody>
+         </thead>
+       </table>
+      </div>
+        </main>
+
+    <!-------------------------Taxi Services html---------------------------->
+    <main class="main" id="Taxi" style="display: none;">
+        <p class="Hotel-Bookings">Taxi Services</p>
+              
+        <div class="card">
+           <img src="icons/combined-shape@3x.png" alt="">
+           <p> Payments</p>
+           <div class="rupee">2350</div>
+           <div class="rupee1">1800</div>
+           <div class="cash">By Cash</div>
+           <div class="online">Online</div>
+        </div> 
+        
+        <div class="cards">
+           <img src="icons/request@3x.png" alt="">
+           <p>Bookings</p>
+           <div class="rup">50 </div>
+           <div class="pay">Total</div>
+           <div class="rup1">24</div>
+           <div class="pay1">Ongoing</div>
+           <div class="rup2">6</div>
+           <div class="pay2">Finished</div>
+           <div class="rup3">12</div>
+           <div class="pay3">Reserved</div>
+        </div>
+   
+        
+        <p class="user">User Requests</p>
+        
+        <div class="align"><button class="Download"> Download </button> </div>
+        <div class="align1"><img class="img1" src="icons/download.PNG" alt=""></div>
+   
+        <div class="table-container">
+         <table>
+           <thead>
+               <tr>
+                   <th class="left">S.No</th>
+                   <th>User Name</th>
+                   <th>Mobile Number</th>
+                   <th>Members</th>
+                   <th>Price ( ₹ )</th>
+                   <th>Status</th>
+                   <th class="right">Response</th>
+               </tr>
+               <tbody>
+                   <tr>
+                       <td>1</td>
+                       <td>Bhanu Prakash</td>
+                       <td>9876543210</td>
+                       <td>3</td>
+                       <td>399.00</td>
+                       <td class="allocated">Allocated</td>
+                   </tr>   
+               </tbody>
+               <tbody>
+                   <tr>
+                       <td>2</td>
+                       <td>Sivaji Chava</td>
+                       <td>9876543210</td>
+                       <td class="cell4">3</td>
+                       <td class="cell5">450.00</td>
+                       <td id="statusCell12" class="waiting">Waiting to Respond</td>
+                       <td id="act12" class="actions">
+                         <button class="approve" onclick="aprve6()">Approve </button>
+                         <button class="reject" onclick="rect6()">Reject</button>
+                       </td>
+                     </tr>
+               </tbody>
+               <tbody>
+                   <tr>
+                       <td>3</td>
+                       <td>Chaithanya N</td>
+                       <td>9876543210</td>
+                       <td class="cell4">4</td>
+                       <td class="cell5">1200.00</td>
+                       <td class="rejected">Rejected</td>
+                       <td></td>
+                     </tr>
+               </tbody>
+               <tbody>
+                   <tr>
+                       <td>4</td>
+                       <td>Umesha N</td>
+                       <td>9876543210</td>
+                       <td class="cell4">2</td>
+                       <td class="cell5">2500.00</td>
+                       <td id="statusCell13" class="waiting">Waiting to Respond</td>
+                <td id="act13" class="actions">
+                  <button class="approve" onclick="approve6()">Approve </button>
+                  <button class="reject" onclick="reject6()">Reject</button>
+                </td>
+                     </tr>
+               </tbody>
+           </thead>
+         </table>
+        </div>
+        </main>    
+
+    <!-------------------------Airport Rides html---------------------------->
+    <main class="main" id="Airport" style="display: none;">
+        <p class="Hotel-Bookings">Airport Rides</p>
+              
+        <div class="card">
+           <img src="icons/combined-shape@3x.png" alt="">
+           <p> Payments</p>
+           <div class="rupee">2350</div>
+           <div class="rupee1">1800</div>
+           <div class="cash">By Cash</div>
+           <div class="online">Online</div>
+        </div> 
+        
+        <div class="cards">
+           <img src="icons/request@3x.png" alt="">
+           <p>Bookings</p>
+           <div class="rup">50 </div>
+           <div class="pay">Total</div>
+           <div class="rup1">24</div>
+           <div class="pay1">Ongoing</div>
+           <div class="rup2">6</div>
+           <div class="pay2">Finished</div>
+           <div class="rup3">12</div>
+           <div class="pay3">Reserved</div>
+        </div>
+   
+        
+        <p class="user">User Requests</p>
+        
+        <div class="align"><button class="Download"> Download </button> </div>
+        <div class="align1"><img class="img1" src="icons/download.PNG" alt=""></div>
+   
+        <div class="table-container">
+         <table>
+           <thead>
+               <tr>
+                   <th class="left">S.No</th>
+                   <th>User Name</th>
+                   <th>Mobile Number</th>
+                   <th>Members</th>
+                   <th>Price ( ₹ )</th>
+                   <th>Status</th>
+                   <th class="right">Response</th>
+               </tr>
+               <tbody>
+                   <tr>
+                       <td>1</td>
+                       <td>Bhanu Prakash</td>
+                       <td>9876543210</td>
+                       <td>3</td>
+                       <td>399.00</td>
+                       <td class="allocated">Allocated</td>
+                   </tr>   
+               </tbody>
+               <tbody>
+                   <tr>
+                       <td>2</td>
+                       <td>Sivaji Chava</td>
+                       <td>9876543210</td>
+                       <td class="cell4">3</td>
+                       <td class="cell5">450.00</td>
+                       <td id="statusCell14" class="waiting">Waiting to Respond</td>
+                       <td id="act14" class="actions">
+                         <button class="approve" onclick="aprve7()">Approve </button>
+                         <button class="reject" onclick="rect7()">Reject</button>
+                       </td>
+                     </tr>
+               </tbody>
+               <tbody>
+                   <tr>
+                       <td>3</td>
+                       <td>Chaithanya N</td>
+                       <td>9876543210</td>
+                       <td class="cell4">4</td>
+                       <td class="cell5">1200.00</td>
+                       <td class="rejected">Rejected</td>
+                       <td></td>
+                     </tr>
+               </tbody>
+               <tbody>
+                   <tr>
+                       <td>4</td>
+                       <td>Umesha N</td>
+                       <td>9876543210</td>
+                       <td class="cell4">2</td>
+                       <td class="cell5">2500.00</td>
+                       <td id="statusCell15" class="waiting">Waiting to Respond</td>
+                       <td id="act15" class="actions">
+                         <button class="approve" onclick="approve7()">Approve </button>
+                         <button class="reject" onclick="reject7()">Reject</button>
+                       </td>
+                     </tr>
+               </tbody>
+           </thead>
+         </table>
+        </div>
+        </main>
+</body>
+<script src="date&time.js"></script>
+</html>
