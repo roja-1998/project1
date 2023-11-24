@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body{
+    height: 98vh;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: 
+    "side header"
+    "side main";
+ 
+}
+.header{
+width: 1460px;
+  background-color: #ff5c02;
+  grid-area: header;
+}
+.logout{
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 1400px;
+  }
+  .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 1340px;
+    position: relative;
+    display: inline-block;
+    top: -55px;
+  }
+  .Bhanu {
+    width: 80px;
+    margin-left: 880px;
+    position: relative;
+    top: -115px;
+    color: white;
+  }
+  .Admin-User {
+    width: 85px;
+  height: 15px;
+ margin-left: -10px;
+  font-family: Roboto;
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: right;
+  color: #fff;
+   
+  }
+  .view-profile {
+    width: 90px;
+    font-size: 10px;
+    color: white;
+    cursor: pointer;
+    margin-left: 380px;
+    font-weight: bold;
+    font-family: Roboto;
+    margin-top: -7px;
+  }
+  .date-time  {
+    width: 90px;
+    margin-left: 1100px;
+    position: relative;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    top: -172px;
+    color: white;
+    display: inline-block;
+    border-left: 3px solid white;
+    padding-left: 10px;
+    border-right: 3px solid white;
+  }
+  #date {
+    width: 80px;
+    font-size: 14px;
+    margin-top: 7px;
+    margin-left: 5px;
+    font-family: Roboto;
+  }
+  #time {
+    font-size: 14px;
+    margin-top: -13px;
+    margin-left: 5px;
+  }
+
+
+
+.side-bar{
+  grid-area: side;
+  width: 220px;
+height: 585px;
+padding: 30.1px 0 183.8px;
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+background-color: #fff;
+}
+
+.img{
+  width: 152px;
+height: 60px;
+margin: 0 38px 55.1px 30px;
+object-fit: contain;
+}
+
+#Home,
+#Hotel-Booking,
+#Puja-Booking,
+#Ujjain-Darshan,
+#Omkarshwar-Tour,
+#Maa-Baglamukki-Tour,
+#Taxi-Services,
+#Airport-Rides,
+#About-Ujjain
+{
+margin-top: -5px;
+  width: 195px;
+  height: 50px;
+  padding-left: 23px;
+  padding-top: 17.5px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#Home{
+  color: white;
+  background-color: orangered;
+}
+
+#Hotel-Bookings{
+  width: 156px;
+  height: 28px;
+margin-top: 30px;
+margin-left: 30px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+.Hotel-Bookings{
+  width: 204px;
+  height: 28px;
+  margin: 20px 66px 20px 25px;
+  font-family: Roboto;
+  font-size: 23px;
+  font-weight: bold;
+  color: #000;
+}
+.card{
+  width: 240px;
+  height: 120px;
+  margin-left: 30px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 
+  rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.card img{
+  width: 20px;
+  height: 15px;
+  margin: 1px 10px 21px 0;
+  object-fit: contain;
+}
+.card p{
+  width: 63px;
+  height: 16px;
+ margin-top: -43px;
+ margin-left: 30px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff5c02;
+}
+.rupee{
+  width: 69px;
+  height: 35px;
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 50px;
+
+  color: #000;
+}
+
+.rupee1{
+  width: 69px;
+  height: 35px;
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 160px;
+  margin-top: -33px;
+  color: #000;
+
+}
+.cash{
+  width: 51px;
+  height: 16px;
+  font-family: Roboto;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #b0b0b0;
+}
+.online{
+  width: 40px;
+  height: 16px;
+  margin-left: 190px;
+  margin-top: -20px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  color: #b0b0b0;
+}
+
+.cards{
+  width: 430px;
+  height: 120px;
+ margin-left: 340px;
+ margin-top: -152px;
+  padding: 16px 19px 16px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 
+  rgba(0, 0, 0, 0.1);
+  background-color: #fff; 
+}
+.cards img{
+  width: 16px;
+  height: 16px;
+  margin: 0 14px 21px 0;
+  object-fit: contain;
+}
+.cards p{
+  width: 63px;
+  height: 16px;
+ margin-top: -43px;
+ margin-left: 30px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff5c02;
+}
+.rup{
+  width: 35px;
+  height: 35px;
+  font-family: Roboto;
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+}
+.rup1,.rup2,.rup3{
+ 
+    width: 35px;
+    height: 35px;
+    margin: -50px 0 0 118px;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+    color: #000;
+}
+.rup2, .rup3{
+  margin-left: 250px;
+}
+.rup3{
+  margin-left: 380px;
+}
+.pay, .pay1, .pay2, .pay3{
+  width: 31px;
+  height: 16px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  color: #b0b0b0;
+}
+.pay1,.pay2,.pay3{
+  margin-left: 100px;
+}
+.pay2,.pay3{
+  margin-left: 230px;
+}
+.pay3{
+  margin-left: 355px;
+}
+.user{
+  width: 157px;
+  height: 28px;
+  margin-left: 30px;
+  margin-top: 50px;
+  font-family: Roboto;
+  font-size: 23.83px;
+  font-weight: bold;
+  color: #000;
+}
+.align, .align1 {
+  text-align: right;
+  margin-top: -55px;
+ 
+}
+
+.Download{
+  margin-right:200px ;
+  width: 100px;
+  height: 30px;
+  padding: 8px 23px;
+  border-radius: 4px;
+  border: solid 1px #ff5c02;
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  color: #ff5c02;
+ 
+}
+
+.img1{
+  margin-right:140px;
+  margin-top: 20px;
+ 
+}
+.table-container{
+  width: 1300px;
+  height: 415px;
+ margin-left: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-top: 10px;
+  
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: 1px;
+}
+thead{
+  background: #ff5c02;
+  color: #fff;
+  height: 60px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+ 
+}
+.left {
+  border-radius: 10px 0 0 10px ;
+}
+.right {
+  border-radius: 0 10px 10px 0 ;
+  margin-left: 400px;
+}
+th{
+  padding: 15px;
+  text-align: left;
+}
+tbody{
+  background: #fff;
+
+  height: 60px;
+  box-shadow: 0 0 20px 0 
+  rgba(0, 0, 0, 0.1);
+}
+td{
+  padding: 15px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  color:  #909090;
+}
+.allocated{
+  width: 69px;
+  height: 19px;
+  margin: 0 0 0 105px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  color: 
+  #00bf4c;
+}
+.rejected{
+  width: 64px;
+  height: 19px;
+  margin: 0 0 1px 105px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+  color: 
+  #ff0000;
+}
+.waiting{
+  width: 140px;
+  height: 19px;
+  margin: 5px 52px 6px 105px;
+  font-family: Roboto;
+  font-size: 15.9px;
+  font-weight: bold;
+  color: #f7b114;
+}
+.approve{
+  width: 80px;
+  height: 30px;
+  margin: 0 10px 0 0;
+  padding: 8px 17px 8px 18px;
+  border-radius: 4px;
+  background-color: #00bf4c;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+}
+.reject{
+  width: 80px;
+  height: 30px;
+  margin: 0 0 0 10px;
+  padding: 8px 22.5px 8px 23.5px;
+  border-radius: 4px;
+  background-color: #ff0000;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+}
+.totalperson
+{
+    font-family: Roboto;
+    font-size: 20.7px;
+    font-weight: 500;
+   
+
+}
+
+.logout i{
+  color: #fff;
+
+}
